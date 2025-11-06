@@ -1,12 +1,14 @@
 package rows
 
+import "strings"
+
 type Row []string
 
 // New erwartet eine Länge und einen String.
 // Gibt eine neue `Row` zurück, die mit dem String gefüllt ist.
 func New(length int, fill string) Row {
-	// TODO
-	return Row{}
+	s := strings.Repeat(fill, length)
+	return strings.Split(s, "")
 }
 
 // String gibt die `Row` als String zurück.
